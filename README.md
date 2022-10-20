@@ -3,7 +3,7 @@
 A summary note of Connext's Community Call
 
 ## 🗓 Community Call List
-- [ 18/20/2022 ] **Connext Commmunity Call #1**
+- **Connext Commmunity Call #1** - Oct 18, 2022
     - Watch [here](https://www.youtube.com/watch?v=b07okMCkqzc)
     - Summary [EN](./community-call-1/README.en.md) | [TH](./community-call-1/README.th.md)
 
