@@ -9,7 +9,7 @@ This is the very first Community Call on Connext, announced after the end of Com
 
 ## 🔎 Who is Connext?
 
-<h3><details open><summary> 🛠 BUIDLing since 2017 </summary>
+<details open><summary> <b>🛠 BUIDLing since 2017</b> </summary>
 
 > _this session was moderated by [Arjun](https://twitter.com/arjunbhuptani)_
 
@@ -22,7 +22,7 @@ Connext team have jumped into the blockchain space and have been BUIDLing since 
 With the goal of solving **blockchain scalability**, the team became one of the first L2 R&D Team. Arjun and the team have built the first layer-2 on Ethereum, which was the [State Channel Networks](https://ethereum.org/en/developers/docs/scaling/state-channels/) designed for payments. Later, the team have worked with other L2 teams such as OmiseGO team, Matic team.
 
 #### 2020
-In 2020, the community the market started to realized that Roll-ups were going to be the future of scalability. At this point, Connext team saw that communication between rollups is necessary and have built a very first Arbitrum-Optimism bridge called [Spacefold](https://github.com/connext/spacefold) as a POC. This is the very first trust-minimized cross-chain bridge for rollups.
+In 2020, the community the market started to realized that Roll-ups were going to be the future of scalability. At this point, Connext team saw that communication between  is necessary and have built a very first Arbitrum-Optimism bridge called [Spacefold](https://github.com/connext/spacefold) as a POC. This is the very first trust-minimized cross-chain bridge for rollups.
 
 </details>
 
