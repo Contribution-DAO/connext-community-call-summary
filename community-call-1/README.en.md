@@ -238,7 +238,7 @@ One of the key idea of the contributor is to distribute the token to the contrib
 
 </details>
 
-<details open><summary> <b>🔫 Wen token?</b> </summary>
+<details><summary> <b>🔫 Wen token?</b> </summary>
 
 > _this session was moderated by [Arjun](https://twitter.com/arjunbhuptani)_
 
@@ -257,6 +257,85 @@ The philosophy of Connext is quite different from other protocol's DAO. The team
 
 ## 📌 Q&A
 
+<details><summary> <b>Q1:</b> What do you think about the future of interoperability in Ethereum via bridges? I mean, are we going to reach same interoperability as well as cosmos through projects like connext? </summary>
+
+Yes. It's not just going to be Connext. Currently, Cosmos is improving as well as Celestia on modular blockchains. In the future, there will be a bunch of different chains that connected through IBC with shared security and shared data availability. 
+
+Cosmos is heading in the direction where they got interoperable ecosystem figured out and currently working on shared security. This is opposed to what Ethereum is doing where the chain started with shared security.
+
+Arjun thinks that many rollups is currently going in the same direction where they are building infrastructure for a specific rollups. Polygon is building data availability layer, StarkNet is, and others are building their own data availability layer. Eventually, all Ecosystem will have a bunch of rollups that communicating with one another through their own data availability or across data availability layer.
+
+Layne also stated that there's going to be a big difference in how homogeneous it is for the interoperability experience in Ethereum. This is because Ethereum have a lot of companies working on the ecosystem side, so there's no unified framework that we can use for all of the protocols. From the ground up, it's gonna be more heterogeneous.
+
+The end users won't be able to experience all these infrasturcture thing. 
+
+</details>
+
+<details><summary> <b>Q2:</b> What are the competitive advantages of your project? What advantages do you have over competitors? What would be your project secure most similar contender in the market today in terms of scalability, security, features, and adaptability? </summary>
+
+The core set of values that the project tries to align with such as trust-minimization and security. This is important because segment of users and developers care about this a lot, and that segment is growing rapidly. 
+
+The other is the community driven aspect that the team want to build the public ecosystem. The goal of Connext is not to become centralized enterprise organization. 
+
+The last thing is the culture, the thing that drives a lot of people to be a part of ecosystem.
+
+</details>
+
+<details><summary> <b>Q3:</b> Can you explain a little about cross chain nfts & how it works?  </summary>
+
+Cross-chain NFTs used the lock-mint method, just like tokens. The difference is that you don't need liquidity pools around that. What is important for cross-chain NFT is that the marketplace should acknowledge the cross-chain NFT on the different chain as well.
+
+</details>
+
+<details><summary> <b>Q4:</b> How did the Nomad event impact the Amarok? </summary>
+
+Connext have a long-standing relationship with Nomad. Connext was building on Nomad as their user by building liquidity infrastructure on top of Nomad.
+
+The way that the incident affected Connext a d other folks in the ecosystem are the router operators that hold Nomad assets that aren't backed by anything. The fortunate thing is that nothing associated with direct cooperation with Nomad wasn't live on Mainnet. 
+
+Connext was giving users the Nomad Asset on the chains where Nomad Asset were the default asset as Nomad was the canonical bridge on those chains. Thus, if you're bridging to EVMOS separately, you would have a risk exposure.
+
+This is the unfortunate nature of composability as what you're building on top of something, you're assuming the security of that layer. For example, if somethings horrible happened to DAI and it depegged, most of the application in the space is also expose to the risk.
+
+The main way that Nomad incident affected us is the upgrade itself. The main change that has happened after the Nomad hack is that we have built our own. Unerlies Connext leveraging other systems for messaging. The same interface was kept as well as optimistic verification that Nomad proposes. Apart from that, Connext also leveraging existing bridges as much as possible.
+
+</details> 
+
+<details><summary> <b>Q5:</b> What are some of xApps that could be built on the Amarok platform? </summary>
+
+Basically anything that is in DeFi right now can be transition over, as well as other application that are cross-chain native. One cool thing that people can do is to link different storage mechanism like [Arewave](https://www.arweave.org/) to make an interoperability with decentralized storage.
+
+The main idea why Arjun is interested in interoperability space is the whole idea of decentralized world computer. This is what Ethereum vision originally, but it didn't ended up what was planned as it was too expensive. Connext enables contracts to interoperate with Arweave through Connext for storage, or even to Golem for computation/GPU Usage. With all these component, it's like [Von Neumann](https://en.wikipedia.org/wiki/Von_Neumann_architecture) computer.
+
+This is super power as this allows users to do interesting thing. For example having a wikipedia run on Arbitrum, and using Arweave as a storage. Or even a machine learning model like DALL-E, Midjourney running on chain.
+
+Although cross-chain DeFi, NFTs are amazing, the idea of world computer would be an entire new use cases that hasn't been possible before.
+
+</details>
+
+<details><summary> <b>Q6:</b> Is xchain arbitraging easier with Connext? </summary>
+
+Cross-chain arbitraging can be difficult. The cross-chain platform make cross-chain arbitraging easier but not faster. The core problem with cross-chain arbitraging is that you're going to competing with people who already have funds on that chain. 
+
+Rahul has also talked with other arbitragers on-chain and they're saying that it's not worth it to compete with people who already got funds on every chain.
+
+</details>
+
+<details><summary> <b>Q7:</b> Any plans to connect with non-evm chain like polkadot or cosmos or parallel execution chains like aptos/sui? </summary>
+
+Yes, Connext is having plans to integrate with other non-EVM chains as well. The team started with EVM chains because the team have not built an expertise on non-EVM chains.
+
+However, Connext is reaching out to other team externally to integrate non-EVM chains to Connext. The only step required is to port Connext EVM contract that is written in Solidity to other language that non-EVM chains suppport.
+
+</details>
+
+<details><summary> <b>Q8:</b> What is the biggest strenth of connext compare to so many other bridge? </summary>
+
+The biggest strenth is where competitive advantage is. In this space, any competitive innovation can be forked and created elsewhere. However, the team is really good at adapting to new ecosystem, the team aren't attached to any idea and are open to changes.
+
+The competitive advantage for Connext is not to win by UI, but it's about building something that help other people succeed, and make other infrastructure project succeed while building community around that. This is what make us stronger than others.
+
+</details>
 
 ## 🌊 Author
 `chompk.eth | Contribution DAO#9502`
