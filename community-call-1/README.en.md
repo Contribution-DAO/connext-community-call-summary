@@ -35,7 +35,7 @@ That update is the Amarok upgrade 🐺
 
 </details>
 
-<details open><summary> <b>🤔 Why Connext?</b> </summary>
+<details id="why-connext"><summary> <b>🤔 Why Connext?</b> </summary>
 
 > _this session was moderated by [Arjun](https://twitter.com/arjunbhuptani)_
 
@@ -64,6 +64,69 @@ The _Ease of Implementation_ for Connext allows the experience of building on Co
 </details>
 
 ## 🐺 Amarok is Comming
+
+<details><summary> <b>🐺 Amarok</b> </summary>
+
+> This session was moderated by [Layne](https://twitter.com/laynehaber)
+
+In the upcoming Amarok upgrade, there's going to be several new features listed below:
+- **🖱 1 click UX** - The current version required user to sign before releasing tokens. This is worse in term of UX. Amarok upgrade remove this procedure.
+- **⛲️ Better Liquidity** - Currently, Connext routers provides LP on two chain side, this requires routers to always rebalance an asset when the demand is high on one specific chains.
+- **🤑 Cheaper & Faster txs** - The Amarok upgrade allows the cross-chain transaction to be initialized on source chain and complete on destination chain. This simplies the process and make cross-chain transaction faster and cheaper.
+- **🤖 Arbitrary Message Passing** - This is not available in NXTPv0 as the information can assign a financial values. With Amarok, people can build apps that can communicate with arbitrary message.
+
+</details>
+
+<details><summary> <b>🪢 How it works: Modular Architecture</b> </summary>
+
+> This session was moderated by [Layne](https://twitter.com/laynehaber)
+
+Arjun have mentioned about modular architecture in [`🤔 Why Connext?`](#why-connext) section. Connext abstract cross-chain communication into different module as seen in figure below.
+
+<p align="center"><img src="img/modular-architecture.png" width="500"></p>
+
+- `Transport Layer` - Defines how to get data from chain A to B. Connext use a messaging system that use the default rollup bridges in a [hub and spoke model](https://0xpostman.medium.com/honk-if-you-like-hub-spoke-7b55cba84c0d) to pass a data through from origin chain, to hub, to the destination spoke.
+- `Verification Layer` - Evalate the veracity of the message from chain A to B. By default, Connext will use Optimistic Bridge. With the modular design, the verification layer can be changed depending on the path. For example, if we bridge Ethereum to IBC, the first leg would use Optimistic Bridge as a verification layer while on Cosmos use IBC verification.
+- `Execution Layer` - This layer packs messages and defines how the message will be put into the transport and verification layer.
+- `Liquidity Layer` - Providing a easy-to-use interface for developers and managing asset complexity. This allow users to receive the token that is mainly used on the destination chain apart from the minted asset (e.g. USDC instead of anyUSDC or nextUSDC). This is the layer that user interacted with.
+
+When we put the transaction lifecycle together, we get the following picture:
+
+<p align="center"><img src="img/txn-flow.png" width="500"></p>
+
+Let's look at the Polygon<>Optimism bridge transaction. 
+1. User send DAI to the liquidity layer via `xcall` function.
+2. DAI is then swap to NextDAI and burn.
+3. The message was sent to the Optimism AMB directly to contract on Ethereum. The messages from all of the connected Spokes then push them back out to the destination chain.
+4. Optimism AMB push the message to the Optimism chain, ready to be executed.
+5. NextDAI was minted on the Optimism and swapped back to DAI for user on Optimism.
+
+No matter what ecosystem users are in, the user experience remains the same. For example, we use AMB on the rollups within Ethereum. But if we change the ecosystem to Cosmos, then we use IBC instead. Similarily, on Polkadot will use XCMP. This is the benefits of using a modular architecture as we can plug-in components in and out to support different communication channel on different chains.
+
+</details>
+
+<details><summary> <b>📞 xCalls</b> </summary>
+
+> _this session was moderated by [Rahul](https://twitter.com/rhlsthrm)_
+
+What Connext wanted to do is to build a infrasturcture for people to make use of it instead of building a UI application. The only thing that developer have to learn to connect their apps is a function call `xcall`. 
+
+<p align="center"><img src="img/xcall.png" width="500"></p>
+
+This `xcall` is very similar to solidity native function `call`. The difference is that `xcall` was designed to do the cross-chain transaction via Connext. The process can be simplifies as shown in the figure above.
+- xApp (cross-chain Apps) called `xcall` into Connext.
+- Connext takes care of bridging, AMBs, routing, etc. and call some function on some chain.
+- Get the data back to xApp in a form of callback.
+
+</details>
+
+<details><summary> <b>📞 xApps are the Future</b> </summary>
+
+> _this session was moderated by [Rahul](https://twitter.com/rhlsthrm)_
+
+
+
+</details>
 
 ## 🎏 Community
 
