@@ -120,15 +120,140 @@ This `xcall` is very similar to solidity native function `call`. The difference 
 
 </details>
 
-<details><summary> <b>📞 xApps are the Future</b> </summary>
+<details><summary> <b>🪛 xApps are the Future</b> </summary>
 
 > _this session was moderated by [Rahul](https://twitter.com/rhlsthrm)_
 
+What can be made possible with **xApps**?
 
+- **💰 xchain DeFI**
+    - Most DeFI protocols are already go multichain. However, Connext think that the fact that users need to change the chains in order to interact with the chain normally is not a good UX. 
+    - The application itself should handle all this steps by themselve. Connext allow the apps to abstract this concept out and make this possible.
+    - Severa xchain DeFi includes 
+        - **xchain DEX**: Any chain to any chain swap (e.g. LiFinance).
+        - **xchain Lending**: Deposit on chain A, borrow on chain B.
+        - **xchain Yield Aggregator**: Rebalance vault accross different chains, easily chasing for yields.
+
+- **🎨 xchain NFTs**
+    - Developer can use Connext to held NFT escrow on one chain and mint NFT on any other chain.
+    - Cross-chain NFT can be used for many purposes
+        - New mints on L2, move to L1 for security
+        - Provide NFT as collateral on demand
+        - etc.
+
+- **🪜 xchain Infra**
+    - Most tools can be expand to cross-chain with Connext. Several use cases includes:
+        - xchain DAO Tooling for governance & more
+        - xchain oracles
+        - xchain tools: wallets, identity systems, ...
+
+</details>
+
+<details><summary> <b>📟 Asynchronous Communication</b> </summary>
+
+> _this session was moderated by [Rahul](https://twitter.com/rhlsthrm)_
+
+How does communication works in the cross-chain world?
+
+Generally, when users interacted with internet, the communication is asynchronous. For example, when accessing any website, the user is connected to the server some where and return the data at some point.
+
+<p align="center"><img src="img/internet.png" width="400"></p>
+
+On the blockchain, this is very different. Let's say you are using Metamask, you send the transaction on the blockchain, you know if the transaction works right away. If the transaction doesn't work, it reverts automatically. This is a synchronous communiucation where every communication is either passed or failed prior execution.
+
+Unlike asynchronous communication, if something doesn't behave properly, it needs to be handle via callback on the other places.
+
+<p align="center"><img src="img/synchronous.png" width="400"></p>
+
+Basically, what Connext is doing is we alluded to the callback pattern at the start.. We provide a way to have asynchronous communication on Solidity and within the smart contract.
+
+With Connext, developers can send message on origin chain. Then Connext will give the ability to execute something on the other chains before sending the data back so that callbacks can be handled.
+
+<p align="center"><img src="img/connext-async.png" width="400"></p>
+
+The current reason why adoption of the cross-chain app is slow because of the complexity of the interfaces and asynchronous communication pattern. Connext try to solve this problem by using a simplify `xcall` function, and the callback handling method for async communication.
+
+</details>
+
+<details><summary> <b>🎯 Path to Mainnet</b> </summary>
+
+> _this session was moderated by [Alex]()_
+
+<p align="center"><img src="img/roadmap.png"></p>
+
+- _Early August_: Refactoring to Hub-and-Spoke model discussed earlier
+- **Currently** (19/10/2022): The team is really close to launch the mainnet.
+- _Late October_: Closed Alpha, a close launch for internal only. This is to test on the partner devs and security of the protocol
+- _November_: Public Beta, the mainnet launch. The team is expected to launch the Amarok on around mid November.
+
+On the **Beta Launch**, Connext will these chains as a starting point support:
+- Ethereum
+- Optimism
+- Polygon
+- Gnosis
+- Arbitrum
+- BNB Chain (BSC)
+- zkSync (TBD)
+
+The network will support main stablecoins such as USDC. **There are a lot of chains/assets in the list that we will integrate in the future**.
+
+Connext is also looking forward to other opportunities such as:
+- xApp partnerships
+- Chain/ecosystem and asset expansions
+- Ensbling mass adoption of a multichain future
+
+</details>
+
+<details><summary> <b>💻 Connext Hacker House @ EthIndia</b> </summary>
+
+> _this session was moderated by [Matthew]()_
+
+Connext will attend EthIndia and host Connext Hacker House in that event.
+
+<p align="center"><img src="img/hacker-house.png"></p>
+
+Apply the hackathon [here](https://connext.network/hackerhouse) now! (Application Deadline 28th October).
 
 </details>
 
 ## 🎏 Community
+
+<details><summary> <b>🪪 Contributor Program</b> </summary>
+
+> _this session was moderated by [Arjun](https://twitter.com/arjunbhuptani)_
+
+<p align="center"><img src="img/contributor-program.png" width="400"></p>
+
+Contributor program is the program to incentivize community to build Connext in a different way. For example building infrastructure, running testnet routers, creating a marketing content, and so on. The Phase 1 of the community program ended a while ago and have the final results available. The results will be announced at around next week after the team finish developing the discord bot.
+
+### 🗓 What about Phase 2? 
+
+The team have underestimate the amount of participants significantly. This cause the team to have more submission than expected, and the submission were checked individually by the moderators.
+
+Therefore, the team is looking at the problem from Phase 1 and make sure that these problems won't persist on Phase 2.
+
+
+### 🕋 The Connext DAO
+One of the key idea of the contributor is to distribute the token to the contributors. The goal toward this is to seating the initial community that will become the part of the DAO in the early stages.
+
+</details>
+
+<details open><summary> <b>🔫 Wen token?</b> </summary>
+
+> _this session was moderated by [Arjun](https://twitter.com/arjunbhuptani)_
+
+The team announced the Amarok upgrade at around March-April 2022. One of the big thing was that the team needs to rearchitect the way system work. Additionally, Connext is also working with Nomad for this upcoming update.
+
+The team underestimate how long coordination between two teams are, and decided to do contributor program in parallel to the new architecture implementation. "I think this is a mistake", said Arjun in the community call. "I'll be completely honest, like we shouldn't have parallel the process. I think that was something that in hindsight, I'm realizing as a lean young organization, it's a bad idea to do multiple things in parallel."
+
+So what's up with the token? Currently, Amarok is in the tail end of being completed. The process was unfortunately delayed due to the [Nomad hack incident](https://techcrunch.com/2022/08/02/nomad-chaotic-exploit-crypto/), and rethink the strategy around messaging system while get audited from scratch.
+
+Beyond that, the token launch itself is going to be stalled for now regarding to the reason mentioned above. The token launch will be focused once the Amarok upgrade is delivered and stable.
+
+###  📜 Philosophy of Connext's DAO
+The philosophy of Connext is quite different from other protocol's DAO. The team believe that Connext is a public infrastructure, unlike other protocols that see the network as a company. Connext goal is to build an ecosystem, not the organization. The team want Connext to be built like the internet where people are contributing together to the public infrastructure.
+
+</details>
 
 ## 📌 Q&A
 
