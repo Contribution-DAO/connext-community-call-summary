@@ -233,7 +233,7 @@ The team have underestimate the amount of participants significantly. This cause
 Therefore, the team is looking at the problem from Phase 1 and make sure that these problems won't persist on Phase 2.
 
 
-### 🕋 The Connext DAO
+### 🏛 The Connext DAO
 One of the key idea of the contributor is to distribute the token to the contributors. The goal toward this is to seating the initial community that will become the part of the DAO in the early stages.
 
 </details>
